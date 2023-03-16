@@ -7,6 +7,12 @@ function pageTrans(){
     //button active class 
     for (let i = 0; i < sBtn.length; i++)
     {
-        
+        sBtn[i].addEventListener('click', function(){
+            let currentBtn = document.querySelectorAll('.activeBtn');
+            currentBtn[0].className = currentBtn[0].className.replace('activeBtn', '');
+            this.className += 'activeBtn';
+        })
     }
 }
+
+pageTrans();
